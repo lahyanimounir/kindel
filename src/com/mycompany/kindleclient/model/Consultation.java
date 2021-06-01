@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package com.mycompany.kindleclient.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author rachad
  */
-public class Consultation {
+public class Consultation implements Serializable {
     
     Emprunt emprunt;
     Document document;
@@ -48,8 +49,11 @@ public class Consultation {
     }
     
     
+    @Override
     public String toString(){
-        return "A definir";
+        return  " CLIENT : "+this.getEmprunt().toString()+
+                " DOCUMENT : "+this.getDocument().toString()+
+                " Date Consultation "+this.getDate_consultation();
     }
     
 }

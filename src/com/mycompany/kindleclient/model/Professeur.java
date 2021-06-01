@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package com.mycompany.kindleclient.model;
 
 /**
  *
@@ -11,19 +11,22 @@ package model;
  */
 public class Professeur extends Client {
     private String matricule;
+    
     public Professeur(String login, String password, String cin, String  nom, String  prenom, String matricule){
         super(login, password, cin, nom, prenom);
-        
+       
         this.matricule= new String(matricule);
     }
     
+    @Override
     public String toString(){
-        return super.toString()+"Matricule: "+matricule;
+        return super.toString()+" Matricule: "+matricule;
     } 
 
     public String getMatricule() {
         return matricule;
     }
+    
    
     
 }

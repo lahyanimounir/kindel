@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package com.mycompany.kindleclient.model;
 
 import java.util.Date;
 
@@ -12,8 +12,8 @@ import java.util.Date;
  * @author rachad
  */
 public class Emprunt {
-    private static int n=0;
-    private final int id;
+   
+   
     private Client client;
     private Kindel kindel;
     private Date date_emprunt;
@@ -24,7 +24,7 @@ public class Emprunt {
         this.kindel= new Kindel(kindel);
         date_emprunt= new Date();
         date_retour=null;
-        id=++n;
+   
     }
 
     public Client getClient() {
@@ -60,8 +60,12 @@ public class Emprunt {
     }
     
     
+    @Override
     public String toString(){
-        return " A definir";
+        return  " Client :  "+this.getClient().toString()+
+                " Kindel : "+this.getKindel().toString()+
+                " Date Emprunt : "+this.getDate_emprunt()+
+                " Date Retour : "+this.getDate_retour();
     }
     
     

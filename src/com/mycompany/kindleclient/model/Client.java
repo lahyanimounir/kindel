@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package com.mycompany.kindleclient.model;
+
+import java.io.Serializable;
 
 /**
  *
  * @author rachad
  */
-public class Client extends Utilisateur {
+public class Client extends Utilisateur implements Serializable {
     
     private String cin;
     private String nom;
@@ -30,7 +32,7 @@ public class Client extends Utilisateur {
     }
     
     public String toString(){
-        return "Cin: "+cin+" Nom:"+nom+" Prenom:"+ prenom;
+        return "Cin: "+cin+" Nom: "+nom+" Prenom: "+ prenom;
     }
 
     public String getCin() {
