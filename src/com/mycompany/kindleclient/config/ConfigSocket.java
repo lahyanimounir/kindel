@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kindleclient;
+package com.mycompany.kindleclient.config;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -38,15 +38,7 @@ public class ConfigSocket {
         InputStream input = soc.getInputStream();
         BufferedReader reader = new BufferedReader(new InputStreamReader(input));
         message = reader.readLine();    // reads a line of text
-        /*OutputStream outflux = soc.getOutputStream();
-        OutputStreamWriter sortie = new OutputStreamWriter(outflux);
-        sortie.write(commande);
-        sortie.flush();
         
-        InputStream influx = soc.getInputStream();
-        BufferedReader in = new BufferedReader(new InputStreamReader(influx));
-        message = in.readLine();*/
-        // System.out.println(message);
 
         return message;
     }
